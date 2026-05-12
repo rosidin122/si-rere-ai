@@ -41,7 +41,7 @@ if prompt := st.chat_input("Tanya SI_ReReAI tentang Genre..."):
         st.markdown(prompt)
 
     with st.chat_message("assistant"):
-        model = genai.GenerativeModel('gemini-1.5-flash', system_instruction=materi_genre)
+        model = genai.GenerativeModel('models/gemini-1.5-flash-latest', system_instruction=materi_genre)
         response = model.generate_content(prompt)
         st.markdown(response.text)
         st.session_state.messages.append({"role": "assistant", "content": response.text})
