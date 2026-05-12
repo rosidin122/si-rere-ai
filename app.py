@@ -1,5 +1,7 @@
 import streamlit as st
 import google.generativeai as genai
+import os
+os.environ["GOOGLE_API_USE_V1_API"] = "true"
 
 # 1. Konfigurasi API KEY
 # Rahasia ini akan kita masukkan nanti di settingan Streamlit Cloud
